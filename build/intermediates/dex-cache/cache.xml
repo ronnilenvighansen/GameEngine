@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/30377a88f609a338c2e60de7eb4f13294959e202/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2b27bad0cf66b58335b138c4d80d1396845f98ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/e14ba27c03f3752b15260ee531ac63fca5f6c629/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_67aad451692182126e0fa0a01b097ee7afd9fc7b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_17df14aad00876dbb3cb52e0e93076996217fbe5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/e14ba27c03f3752b15260ee531ac63fca5f6c629/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_67aad451692182126e0fa0a01b097ee7afd9fc7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/30377a88f609a338c2e60de7eb4f13294959e202/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_2b27bad0cf66b58335b138c4d80d1396845f98ae.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/958e4eeb106dc35589285827e3081a54ae0ab52a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b681cca181405bb05ee2d6ea9b17642eed511304/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/d96eb1c7e40ed90f0f86064ed53500c52b413099/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_85cfe4b18e63e0bdd0c59d1d5808cf3a54fb1616/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/958e4eeb106dc35589285827e3081a54ae0ab52a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_b681cca181405bb05ee2d6ea9b17642eed511304.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/8fc9459f8dc26fa176824a56d2416b7b8c9f4ba4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6d39bd92799dbb2e8692d0c2d6736046d2f500a6/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/8fc9459f8dc26fa176824a56d2416b7b8c9f4ba4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_6d39bd92799dbb2e8692d0c2d6736046d2f500a6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/5257b2e61adc3b9574166e54f1ac02d978f8a9dd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1687eb75daf115da10825942fc0a82f189ae7e39/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_e404ec8a7d736d4dea0eb4486dedb704e04de5b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/5257b2e61adc3b9574166e54f1ac02d978f8a9dd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_1687eb75daf115da10825942fc0a82f189ae7e39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/d96eb1c7e40ed90f0f86064ed53500c52b413099/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_85cfe4b18e63e0bdd0c59d1d5808cf3a54fb1616.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_e404ec8a7d736d4dea0eb4486dedb704e04de5b2.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="09d9176221b4b9a0e085b0b7c076385ec4ee8428">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_222981f36c0a0e17b171c9521921dd4c402c9107/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/b461e39f23cb95c4ebac96d7400ef619eb0d4121/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_07d8793c1e140b66d11b53263d5cf0385cb444d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/04cb9c314b44feccab22d914ef168c090c63038a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_c22d32c26c43d472a441cab113d72cfed9ca3834.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/b461e39f23cb95c4ebac96d7400ef619eb0d4121/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_07d8793c1e140b66d11b53263d5cf0385cb444d9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.0.0-alpha1_199786f216da96407f945e3cf248bc8b543419a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/970cc6305ea5e4593fb942dd8901abc811ed5919/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_243f516119f14a8b1cec68a8ef40484b2228e21d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/04cb9c314b44feccab22d914ef168c090c63038a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c22d32c26c43d472a441cab113d72cfed9ca3834/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/support-annotations-26.0.0-alpha1_199786f216da96407f945e3cf248bc8b543419a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/40dc9d23170975a8eee1ddc7c16c993eb03858c9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_7429cdab537d478b87585ce872e6287b2a9e6385.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ronnilenvighansen/.android/build-cache/40dc9d23170975a8eee1ddc7c16c993eb03858c9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7429cdab537d478b87585ce872e6287b2a9e6385/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ronnilenvighansen/.android/build-cache/970cc6305ea5e4593fb942dd8901abc811ed5919/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/pre-dexed/debug/classes_243f516119f14a8b1cec68a8ef40484b2228e21d.jar" />
+    </item>
+
+</items>
