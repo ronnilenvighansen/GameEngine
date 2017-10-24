@@ -381,6 +381,7 @@ public abstract class GameEngine extends Activity implements Runnable, SensorEve
                 {
                     screen.update(deltaTime); // parameter doesn't matter now
                 }
+                startTime = System.nanoTime();
                 freeEvents();
                 // copy objects from virtual screen to actual screen
                 src.left = 0;
