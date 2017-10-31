@@ -1,5 +1,7 @@
 package com.dat16v1.ronnilenvighansen.gameengine.Breakout;
 
+import com.dat16v1.ronnilenvighansen.gameengine.Screen;
+
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -12,11 +14,12 @@ import com.dat16v1.ronnilenvighansen.gameengine.TouchEvent;
 
 import java.util.List;
 
+
 /**
- * Created by ronnilenvighansen on 03/10/2017.
+ * Created by ronnilenvighansen on 24/10/2017.
  */
 
-public class GameScreen extends Screen
+public class GameScreenL2 extends Screen
 {
     enum State
     {
@@ -25,9 +28,9 @@ public class GameScreen extends Screen
         GameOver
     }
 
-    World world;
+    WorldL2 world;
     WorldRenderer renderer;
-    State state = State.Running;
+    GameScreen.State state = GameScreen.State.Running;
 
     Bitmap background = null;
     Bitmap resume = null;
@@ -37,10 +40,10 @@ public class GameScreen extends Screen
     Sound blockSound = null;
     public Sound gameOverSound = null;
 
-    public GameScreen(GameEngine gameEngine)
+    public GameScreenL2(GameEngine gameEngine)
     {
         super(gameEngine);
-        world = new World(gameEngine, new CollisionListener()
+        world = new WorldL2(gameEngine, new CollisionListener()
         {
             @Override
             public void collisionWall()
@@ -82,22 +85,15 @@ public class GameScreen extends Screen
     {
         if(world.gameOver)
         {
-            state = State.GameOver;
+            state = GameScreen.State.GameOver;
         }
-
-        if(world.levelDone)
+        if(state == GameScreen.State.Paused && gameEngine.getTouchEvents().size() > 0)
         {
-            gameEngine.setScreen((new GameScreenL2(gameEngine)));
-            return;
-        }
-
-        if(state == State.Paused && gameEngine.getTouchEvents().size() > 0)
-        {
-            state = State.Running;
+            state = GameScreen.State.Running;
             resume();
         }
 
-        if(state == State.GameOver)
+        if(state == GameScreen.State.GameOver)
         {
             List<TouchEvent> events = gameEngine.getTouchEvents();
             for(int i = 0; i < events.size(); i++)
@@ -110,16 +106,16 @@ public class GameScreen extends Screen
             }
         }
 
-        if(state == State.Running && gameEngine.getTouchY(0) < 38 && gameEngine.getTouchX(0) > 320-38)
+        if(state == GameScreen.State.Running && gameEngine.getTouchY(0) < 38 && gameEngine.getTouchX(0) > 320-38)
         {
-            state = State.Paused;
+            state = GameScreen.State.Paused;
             pause();
             return;
         }
 
         gameEngine.drawBitMap(background, 0, 0);
 
-        if(state == State.Running)
+        if(state == GameScreen.State.Running)
         {
             world.update(deltaTime, gameEngine.getAccelerometer()[0]);
         }
@@ -127,12 +123,12 @@ public class GameScreen extends Screen
 
         gameEngine.drawText(font, ("Points: " + world.points + " Lives: " + world.lives), 24, 24, Color.GREEN, 13);
 
-        if(state == State.Paused)
+        if(state == GameScreen.State.Paused)
         {
             gameEngine.drawBitMap(resume, 160 - resume.getWidth()/2, 240 - resume.getHeight()/2);
         }
 
-        if(state == State.GameOver)
+        if(state == GameScreen.State.GameOver)
         {
             gameEngine.drawBitMap(gameOver, 160 - gameOver.getWidth()/2, 240 - gameOver.getHeight()/2);
         }
@@ -141,9 +137,9 @@ public class GameScreen extends Screen
     @Override
     public void pause()
     {
-        if(state == State.Running)
+        if(state == GameScreen.State.Running)
         {
-            state = State.Paused;
+            state = GameScreen.State.Paused;
         }
         gameEngine.music.pause();
     }

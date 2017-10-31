@@ -10,10 +10,22 @@ import com.dat16v1.ronnilenvighansen.gameengine.Screen;
 public class Breakout extends GameEngine
 {
 
-
     @Override
     public Screen createScreen()
     {
+        music = loadMusic("breakoutassets/music.ogg");
         return new MainMenuScreen(this);
+    }
+
+    public void onPause()
+    {
+        super.onPause();
+        music.pause();
+    }
+
+    public void onResume()
+    {
+        super.onResume();
+        music.play();
     }
 }

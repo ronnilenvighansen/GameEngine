@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by ronnilenvighansen on 10/10/2017.
+ * Created by ronnilenvighansen on 24/10/2017.
  */
 
-public class World
+public class WorldL2 extends World
 {
     public static final float MIN_X = 0;
     public static final float MAX_X = 319;
@@ -24,16 +24,11 @@ public class World
     int points = 0;
     int lives = 3;
     int paddleHits = 0;
-    int advance = 0;
-    boolean levelDone = false;
+    int advance = 10;
 
-    public World()
+    public WorldL2(GameEngine ge, CollisionListener listener)
     {
-        throw new RuntimeException("This should never happen");
-    }
-
-    public World(GameEngine ge, CollisionListener listener)
-    {
+        super(ge, listener);
         this.gameEngine = ge;
         this.listener = listener;
         generateBlocks();
@@ -124,8 +119,7 @@ public class World
 
         if(blocks.size() == 0)
         {
-            levelDone = true;
-            //generateBlocks();
+            generateBlocks();
         }
     }
 
@@ -265,10 +259,10 @@ public class World
             ball.vy = -ball.vy;
             listener.collisionPaddle();
             paddleHits++;
-            if(paddleHits == 3)
+            if(paddleHits == 2)
             {
                 paddleHits = 0;
-                advance = 10;
+                advance = advance + 10;
                 advanceBlocks();
             }
         }

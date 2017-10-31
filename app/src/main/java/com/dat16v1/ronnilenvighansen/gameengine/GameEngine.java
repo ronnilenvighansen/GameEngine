@@ -7,7 +7,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -47,8 +49,10 @@ public abstract class GameEngine extends Activity implements Runnable, SensorEve
 
     Rect src = new Rect();
     Rect dst = new Rect();
+    Paint paint = new Paint();
 
     private SoundPool soundPool;
+    public Music music = null;
 
     private TouchHandler touchHandler;
     private TouchEventPool touchEventPool = new TouchEventPool();
@@ -110,7 +114,6 @@ public abstract class GameEngine extends Activity implements Runnable, SensorEve
         accelerometer[0] = -1.0f * accelerometer[0];
     }
 
-    //  public List<TouchEvent> getTouchEvents() {return null;}
     public float[] getAccelerometer()
     {
         return accelerometer;
@@ -281,6 +284,24 @@ public abstract class GameEngine extends Activity implements Runnable, SensorEve
         int virtualY = 0;
         virtualY = (int)((float)touchHandler.getTouchY(pointer)/(float)surfaceView.getHeight()*virtualScreen.getHeight()); // Get some other x than the real x
         return virtualY;
+    }
+
+    public Typeface loadFont(String fileName)
+    {
+        Typeface font = Typeface.createFromAsset(getAssets(), fileName);
+        if(font == null)
+        {
+            throw new RuntimeException("Could not load font from assets: " + fileName);
+        }
+        return font;
+    }
+
+    public void drawText(Typeface font, String text, int x, int y, int color, int size)
+    {
+        paint.setTypeface(font);
+        paint.setTextSize(size);
+        paint.setColor(color);
+        canvas.drawText(text, x, y, paint);
     }
 
     public void onPause()
