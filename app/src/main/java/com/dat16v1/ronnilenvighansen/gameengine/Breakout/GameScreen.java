@@ -61,7 +61,7 @@ public class GameScreen extends Screen
             }
 
             @Override
-            public void gamveOver()
+            public void gameOver()
             {
                 gameOverSound.play(1);
             }
@@ -137,6 +137,7 @@ public class GameScreen extends Screen
             gameEngine.drawBitMap(gameOver, 160 - gameOver.getWidth()/2, 240 - gameOver.getHeight()/2);
         }
     }
+
 
     @Override
     public void pause()

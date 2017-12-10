@@ -92,6 +92,7 @@ public class TestScreen extends Screen
 
     }
 
+
     @Override
     public void pause() {
         Log.d("Testscreen", "the screen is paused");

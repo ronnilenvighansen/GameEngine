@@ -7,8 +7,6 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 
 import com.dat16v1.ronnilenvighansen.gameengine.GameEngine;
-import com.dat16v1.ronnilenvighansen.gameengine.Music;
-import com.dat16v1.ronnilenvighansen.gameengine.Screen;
 import com.dat16v1.ronnilenvighansen.gameengine.Sound;
 import com.dat16v1.ronnilenvighansen.gameengine.TouchEvent;
 
@@ -28,8 +26,8 @@ public class GameScreenL2 extends Screen
         GameOver
     }
 
-    WorldL2 world;
-    WorldRenderer renderer;
+    WorldL2 world2;
+    WorldRendererL2 renderer;
     GameScreen.State state = GameScreen.State.Running;
 
     Bitmap background = null;
@@ -43,7 +41,7 @@ public class GameScreenL2 extends Screen
     public GameScreenL2(GameEngine gameEngine)
     {
         super(gameEngine);
-        world = new WorldL2(gameEngine, new CollisionListener()
+        world2 = new WorldL2(gameEngine, new CollisionListener()
         {
             @Override
             public void collisionWall()
@@ -64,13 +62,13 @@ public class GameScreenL2 extends Screen
             }
 
             @Override
-            public void gamveOver()
+            public void gameOver()
             {
                 gameOverSound.play(1);
             }
         }
         );
-        renderer = new WorldRenderer(gameEngine, world);
+        renderer = new WorldRendererL2(gameEngine, world2);
         background = gameEngine.loadBitmap("breakoutassets/background.png");
         resume = gameEngine.loadBitmap("breakoutassets/resume.png");
         gameOver = gameEngine.loadBitmap("breakoutassets/gameover.png");
@@ -83,7 +81,7 @@ public class GameScreenL2 extends Screen
     @Override
     public void update(float deltaTime)
     {
-        if(world.gameOver)
+        if(world2.gameOver)
         {
             state = GameScreen.State.GameOver;
         }
@@ -117,11 +115,11 @@ public class GameScreenL2 extends Screen
 
         if(state == GameScreen.State.Running)
         {
-            world.update(deltaTime, gameEngine.getAccelerometer()[0]);
+            world2.update(deltaTime, gameEngine.getAccelerometer()[0]);
         }
         renderer.render();
 
-        gameEngine.drawText(font, ("Points: " + world.points + " Lives: " + world.lives), 24, 24, Color.GREEN, 13);
+        gameEngine.drawText(font, ("Points: " + world2.points + " Lives: " + world2.lives), 24, 24, Color.GREEN, 13);
 
         if(state == GameScreen.State.Paused)
         {
@@ -133,6 +131,7 @@ public class GameScreenL2 extends Screen
             gameEngine.drawBitMap(gameOver, 160 - gameOver.getWidth()/2, 240 - gameOver.getHeight()/2);
         }
     }
+
 
     @Override
     public void pause()

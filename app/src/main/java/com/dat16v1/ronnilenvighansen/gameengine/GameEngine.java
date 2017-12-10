@@ -104,6 +104,8 @@ public abstract class GameEngine extends Activity implements Runnable, SensorEve
         {
             setVirtualScreen(320, 480);
         }
+        //force manually to Landscape
+        //setVirtualScreen(480, 320);
     }
 
     public void onAccuracyChanged(Sensor sensor, int accuracy) {}

@@ -1,9 +1,5 @@
 package com.dat16v1.ronnilenvighansen.gameengine;
 
-/**
- * Created by julieglasdam on 12/09/2017.
- */
-
 public interface TouchHandler
 {
     public boolean isTouchDown(int pointer);

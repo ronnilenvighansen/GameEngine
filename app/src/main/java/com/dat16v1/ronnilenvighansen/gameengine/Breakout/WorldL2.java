@@ -80,12 +80,12 @@ public class WorldL2 extends World
             if(lives == 0)
             {
                 gameOver = true;
-                listener.gamveOver();
+                listener.gameOver();
                 return;
             }
             else
             {
-                ball.y = (int)MAX_Y/2;
+                ball.y = (int)paddle.y - 5;
                 if(ball.vy > 0)
                 {
                     ball.vy = -ball.vy;
@@ -262,7 +262,7 @@ public class WorldL2 extends World
             if(paddleHits == 2)
             {
                 paddleHits = 0;
-                advance = advance + 10;
+                advance = 10;
                 advanceBlocks();
             }
         }

@@ -9,5 +9,5 @@ public interface CollisionListener
     public void collisionWall();
     public void collisionPaddle();
     public void collisionBlock();
-    public void gamveOver();
+    public void gameOver();
 }

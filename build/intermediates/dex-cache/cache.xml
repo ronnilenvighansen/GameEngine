@@ -142,7 +142,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="09d9176221b4b9a0e085b0b7c076385ec4ee8428">
+        sha1="365c2b9b25999dd1c7fe7c57e5c52b30da15a980">
         <dex dex="/Users/ronnilenvighansen/AndroidStudioProjects/GameEngine/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_222981f36c0a0e17b171c9521921dd4c402c9107/classes.dex" />
     </item>
     <item

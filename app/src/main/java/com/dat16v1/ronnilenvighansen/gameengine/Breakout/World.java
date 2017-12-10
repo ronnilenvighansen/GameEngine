@@ -42,7 +42,7 @@ public class World
     private void generateBlocks()
     {
         blocks.clear();
-        for (int y = 50, type = 0; y < 50 + 8 * Block.HEIGHT; y = y + (int)Block.HEIGHT+0, type++) //for each row
+        for (int y = 50, type = 0; y < 50 + 3 * Block.HEIGHT; y = y + (int)Block.HEIGHT+0, type++) //for each row
         {
             for(int x = 20; x < MAX_X - Block.WIDTH/2; x = x + (int)Block.WIDTH+0) //for each column
             {
@@ -85,7 +85,7 @@ public class World
             if(lives == 0)
             {
                 gameOver = true;
-                listener.gamveOver();
+                listener.gameOver();
                 return;
             }
             else
