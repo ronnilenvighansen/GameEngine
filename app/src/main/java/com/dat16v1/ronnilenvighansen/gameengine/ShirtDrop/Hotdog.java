@@ -1,4 +1,4 @@
-package com.dat16v1.ronnilenvighansen.gameengine.FoodKamikaze;
+package com.dat16v1.ronnilenvighansen.gameengine.ShirtDrop;
 
 /**
  * Created by ronnilenvighansen on 05/12/2017.

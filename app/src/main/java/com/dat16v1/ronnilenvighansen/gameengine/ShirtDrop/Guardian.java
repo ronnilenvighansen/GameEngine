@@ -1,4 +1,4 @@
-package com.dat16v1.ronnilenvighansen.gameengine.FoodKamikaze;
+package com.dat16v1.ronnilenvighansen.gameengine.ShirtDrop;
 
 /**
  * Created by ronnilenvighansen on 08/12/2017.
@@ -6,8 +6,8 @@ package com.dat16v1.ronnilenvighansen.gameengine.FoodKamikaze;
 
 public class Guardian
 {
-    public static final int WIDTH = 27;
-    public static final int HEIGHT = 24;
+    public static final int WIDTH = 32;
+    public static final int HEIGHT = 32;
     public int x = 0;
     public int y = 0;
 

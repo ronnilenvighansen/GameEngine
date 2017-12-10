@@ -1,4 +1,4 @@
-package com.dat16v1.ronnilenvighansen.gameengine.FoodKamikaze;
+package com.dat16v1.ronnilenvighansen.gameengine.ShirtDrop;
 
 import com.dat16v1.ronnilenvighansen.gameengine.GameEngine;
 import com.dat16v1.ronnilenvighansen.gameengine.Screen;
@@ -7,12 +7,12 @@ import com.dat16v1.ronnilenvighansen.gameengine.Screen;
  * Created by ronnilenvighansen on 24/11/2017.
  */
 
-public class FoodKamikaze extends GameEngine
+public class ShirtDrop extends GameEngine
     {
         @Override
         public Screen createScreen()
         {
-            music = loadMusic("foodkamikazeassets/music.ogg");
+            music = loadMusic("shirtdropassets/music.ogg");
             return new MainMenuScreen(this);
         }
 

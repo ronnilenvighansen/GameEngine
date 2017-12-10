@@ -1,4 +1,4 @@
-package com.dat16v1.ronnilenvighansen.gameengine.FoodKamikaze;
+package com.dat16v1.ronnilenvighansen.gameengine.ShirtDrop;
 
 import com.dat16v1.ronnilenvighansen.gameengine.GameEngine;
 
@@ -17,33 +17,34 @@ public class World
     public static final float MIN_Y = 32;
     public static final float MAX_Y = 479;
     Shirt shirt = new Shirt();
+    List<Guardian> guardianList = new ArrayList<>();
     List<Hotdog> hotdogList = new ArrayList<>();
     public int maxHotdogs = 3;
+    public int maxGuardians = 1;
     GameEngine gameEngine;
-    CollisionListener listener;
     boolean gameOver = false;
     int points = 0;
-    int lives = 3;
 
     public World()
     {
         throw new RuntimeException("This should never happen");
     }
 
-    public World(GameEngine ge, CollisionListener listener)
+    public World(GameEngine ge)
     {
         this.gameEngine = ge;
-        this.listener = listener;
         initializeHotdogs();
+        initializeGuardian();
     }
 
 
 
-    public void update(float deltatime)
+    public void update(float deltaTime)
     {
         if(gameEngine.isTouchDown(0))
         {
-            if(gameEngine.getTouchY(0) > 32 || gameEngine.getTouchX(0) < 282)
+            if(gameEngine.getTouchY(0) > 32 || gameEngine.getTouchX(0) < 144 ||
+                    (gameEngine.getTouchX(0) > 176 && gameEngine.getTouchX(0) < 282))
             {
                 shirt.x = gameEngine.getTouchX(0) - Shirt.WIDTH;
             }
@@ -58,11 +59,12 @@ public class World
             shirt.x = (int)(MAX_X - Shirt.WIDTH);
         }
 
-        Hotdog hotdog = null;
+        Hotdog hotdog;
+        Guardian guardian;
         for(int i = 0; i < maxHotdogs; i++)
         {
             hotdog = hotdogList.get(i);
-            hotdog.y = (int)(hotdog.y - 100 * deltatime);
+            hotdog.y = (int)(hotdog.y - 100 * deltaTime);
             if(hotdog.y < 0 - Hotdog.HEIGHT)
             {
                 Random random = new Random();
@@ -70,18 +72,51 @@ public class World
                 hotdog.x = random.nextInt(320);
             }
         }
+
+        for(int i = 0; i < maxGuardians; i++)
+        {
+            guardian = guardianList.get(i);
+            guardian.y = (int)(guardian.y + 300 * deltaTime);
+            if(guardian.y > 480 + Guardian.HEIGHT)
+            {
+                guardian.y = shirt.y + Shirt.HEIGHT;
+                guardian.x = shirt.x;
+            }
+        }
+
         collideHotdog();
+        collideGuardian();
     }
 
     private void collideHotdog()
     {
-        Hotdog hotdog = null;
+        Hotdog hotdog;
         for(int i = 0; i < maxHotdogs; i++)
         {
             hotdog = hotdogList.get(i);
             if(collideRects(shirt.x, shirt.y, Shirt.WIDTH, Shirt.HEIGHT, hotdog.x, hotdog.y, Hotdog.WIDTH, Hotdog.HEIGHT))
             {
                 gameOver = true;
+            }
+        }
+    }
+
+    private void collideGuardian()
+    {
+        Hotdog hotdog;
+        Guardian guardian = null;
+        for(int i = 0; i < maxHotdogs; i++)
+        {
+            hotdog = hotdogList.get(i);
+            for(int j = 0; j < maxGuardians; j++)
+            guardian = guardianList.get(j);
+            if(collideRects(guardian.x, guardian.y, Guardian.WIDTH, Guardian.HEIGHT,
+                    hotdog.x, hotdog.y, hotdog.WIDTH, hotdog.HEIGHT))
+            {
+                Random random = new Random();
+                hotdog.y = 500 + random.nextInt(100);
+                hotdog.x = random.nextInt(320);
+                points = points + (10);
             }
         }
     }
@@ -115,6 +150,11 @@ public class World
         }
     }
 
+    private void initializeGuardian()
+    {
+        Guardian guardian = new Guardian(shirt.x, (shirt.y + Shirt.HEIGHT));
+        guardianList.add(guardian);
+    }
 
 }
 

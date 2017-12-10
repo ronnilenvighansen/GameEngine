@@ -1,4 +1,4 @@
-package com.dat16v1.ronnilenvighansen.gameengine.FoodKamikaze;
+package com.dat16v1.ronnilenvighansen.gameengine.ShirtDrop;
 
 import android.graphics.Bitmap;
 
@@ -19,8 +19,8 @@ public class MainMenuScreen extends Screen
     public MainMenuScreen(GameEngine gameEngine)
     {
         super(gameEngine);
-        background = gameEngine.loadBitmap("foodkamikazeassets/background.jpg");
-        startgame = gameEngine.loadBitmap("foodkamikazeassets/startgame.png");
+        background = gameEngine.loadBitmap("shirtdropassets/background.jpg");
+        startgame = gameEngine.loadBitmap("shirtdropassets/startgame.png");
     }
 
     @Override

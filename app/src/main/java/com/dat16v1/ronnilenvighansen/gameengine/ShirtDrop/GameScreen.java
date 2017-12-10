@@ -1,6 +1,8 @@
-package com.dat16v1.ronnilenvighansen.gameengine.FoodKamikaze;
+package com.dat16v1.ronnilenvighansen.gameengine.ShirtDrop;
 
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.Typeface;
 
 import com.dat16v1.ronnilenvighansen.gameengine.GameEngine;
 import com.dat16v1.ronnilenvighansen.gameengine.Screen;
@@ -31,39 +33,22 @@ public class GameScreen extends Screen
     Bitmap pause = null;
     Bitmap resume = null;
     Bitmap gameOver = null;
+    Bitmap guardian = null;
     Sound sound = null;
+    Typeface font = null;
 
     public GameScreen(GameEngine gameEngine)
     {
         super(gameEngine);
-        world = new World(gameEngine, new CollisionListener() {
-            @Override
-            public void collisionBottom() {
-
-            }
-
-            @Override
-            public void collisionHotdog() {
-
-            }
-
-            @Override
-            public void collisionGuardian()
-            {
-
-            }
-
-            @Override
-            public void gameOver() {
-
-            }
-        });
+        world = new World(gameEngine);
         renderer = new WorldRenderer(gameEngine, world);
-        background = gameEngine.loadBitmap("foodkamikazeassets/background.jpg");
-        pause = gameEngine.loadBitmap("foodkamikazeassets/pause.png");
-        resume = gameEngine.loadBitmap("foodkamikazeassets/resume.png");
-        gameOver = gameEngine.loadBitmap("foodkamikazeassets/gameover.png");
-        sound = gameEngine.loadSound("foodkamikazeassets/explosion.wav");
+        background = gameEngine.loadBitmap("shirtdropassets/background.jpg");
+        pause = gameEngine.loadBitmap("shirtdropassets/pause.png");
+        resume = gameEngine.loadBitmap("shirtdropassets/resume.png");
+        gameOver = gameEngine.loadBitmap("shirtdropassets/gameover.png");
+        guardian = gameEngine.loadBitmap("shirtdropassets/guardian.png");
+        sound = gameEngine.loadSound("shirtdropassets/explosion.wav");
+        font = gameEngine.loadFont("shirtdropassets/font.ttf");
     }
 
     @Override
@@ -114,7 +99,9 @@ public class GameScreen extends Screen
         gameEngine.drawBitmap(background, 0, 0, 0, (int)backgroundY, 320, 480);
         gameEngine.drawBitMap(pause, 288, 0);
         renderer.render();
+        renderer.shoot();
 
+        gameEngine.drawText(font, "Points: " + world.points, 24, 24, Color.GREEN, 13);
         if(state == State.Paused)
         {
             gameEngine.drawBitMap(resume, 160 - resume.getWidth()/2, 240 - resume.getHeight()/2);
