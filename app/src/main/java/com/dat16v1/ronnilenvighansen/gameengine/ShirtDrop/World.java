@@ -24,6 +24,8 @@ public class World
     GameEngine gameEngine;
     boolean gameOver = false;
     int points = 0;
+    int hotdogVelocity = 100;
+    int velocityThreshold = 100;
 
     public World()
     {
@@ -43,7 +45,7 @@ public class World
     {
         if(gameEngine.isTouchDown(0))
         {
-            if(gameEngine.getTouchY(0) > 32 || gameEngine.getTouchX(0) < 144 ||
+            if(gameEngine.getTouchY(0) > MIN_Y || gameEngine.getTouchX(0) < 144 ||
                     (gameEngine.getTouchX(0) > 176 && gameEngine.getTouchX(0) < 282))
             {
                 shirt.x = gameEngine.getTouchX(0) - Shirt.WIDTH;
@@ -64,12 +66,13 @@ public class World
         for(int i = 0; i < maxHotdogs; i++)
         {
             hotdog = hotdogList.get(i);
-            hotdog.y = (int)(hotdog.y - 100 * deltaTime);
+            hotdog.y = (int)(hotdog.y - hotdogVelocity * deltaTime);
             if(hotdog.y < 0 - Hotdog.HEIGHT)
             {
                 Random random = new Random();
-                hotdog.y = 500 + random.nextInt(100);
-                hotdog.x = random.nextInt(320);
+                hotdog.y = (int)MAX_Y + random.nextInt(100);
+                hotdog.x = random.nextInt((int)MAX_X);
+                points-=5;
             }
         }
 
@@ -77,7 +80,7 @@ public class World
         {
             guardian = guardianList.get(i);
             guardian.y = (int)(guardian.y + 300 * deltaTime);
-            if(guardian.y > 480 + Guardian.HEIGHT)
+            if(guardian.y > (int)MAX_Y + Guardian.HEIGHT)
             {
                 guardian.y = shirt.y + Shirt.HEIGHT;
                 guardian.x = shirt.x;
@@ -86,6 +89,11 @@ public class World
 
         collideHotdog();
         collideGuardian();
+        if(points >= velocityThreshold)
+        {
+            hotdogVelocity += 20;
+            velocityThreshold+=100;
+        }
     }
 
     private void collideHotdog()
@@ -114,9 +122,11 @@ public class World
                     hotdog.x, hotdog.y, hotdog.WIDTH, hotdog.HEIGHT))
             {
                 Random random = new Random();
-                hotdog.y = 500 + random.nextInt(100);
-                hotdog.x = random.nextInt(320);
-                points = points + (10);
+                hotdog.y = (int)MAX_Y + random.nextInt((int)MAX_Y-Shirt.HEIGHT);
+                hotdog.x = random.nextInt((int)MAX_X-Shirt.WIDTH);
+                guardian.y = shirt.y + Shirt.HEIGHT;
+                guardian.x = shirt.x;
+                points += 10;
             }
         }
     }
@@ -142,9 +152,9 @@ public class World
         int i = 0;
         while (i < maxHotdogs)
         {
-            int randX = rand.nextInt(272);
-            int randY = rand.nextInt(100);
-            Hotdog hotdog = new Hotdog(randX, 480 + randY + i * 100);
+            int randX = rand.nextInt((int)MAX_X-Shirt.WIDTH);
+            int randY = rand.nextInt((int)MAX_Y-Shirt.HEIGHT);
+            Hotdog hotdog = new Hotdog(randX, (int)MAX_Y + randY);
             hotdogList.add(hotdog);
             i++;
         }
